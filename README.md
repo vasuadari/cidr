@@ -1,16 +1,17 @@
 # CIDR
 
-**TODO: Add description**
+A simple package to calculate subnet mask, number of hosts, last address
+and class of CIDR from a given CIDR notation.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `cidr` to your list of dependencies in `mix.exs`:
+The package can be installed by adding `cidr` to your list of dependencies
+in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:cidr, "~> 0.1.0"}
+    {:cidr, github: "vasuadari/cidr"}
   ]
 end
 ```
