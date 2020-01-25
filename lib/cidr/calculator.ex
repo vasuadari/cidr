@@ -1,13 +1,17 @@
-defmodule CIDRCalculator do
+defmodule CIDR.Calculator do
   @total_network_bits 32
+
+  alias CIDR.Math
 
   def class(cidr) do
     subnet_mask(cidr)
     |> case do
       <<_, 0, 0, 0>> ->
         :A
+
       <<_, _, 0, 0>> ->
         :B
+
       <<_, _, _, _>> ->
         :C
     end

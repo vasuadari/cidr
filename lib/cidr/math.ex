@@ -1,4 +1,4 @@
-defmodule Math do
+defmodule CIDR.Math do
   def pow(x, y) do
     :math.pow(x, y)
     |> Float.to_string()
