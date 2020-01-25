@@ -61,10 +61,10 @@ defmodule CIDR.Calculator do
 
   def last_address({a, b, c, d}, cidr) do
     <<l_a, l_b, l_c, l_d>> = last_address(cidr)
-    a = if l_a == 255, do: 255, else: a + l_a
-    b = if l_b == 255, do: 255, else: b + l_b
-    c = if l_c == 255, do: 255, else: c + l_c
-    d = if l_d == 255, do: 255, else: d + l_d
+    a = min(255, a + l_a)
+    b = min(255, b + l_b)
+    c = min(255, c + l_c)
+    d = min(255, d + l_d)
 
     <<a, b, c, d>>
   end
