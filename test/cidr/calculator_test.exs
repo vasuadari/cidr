@@ -1,5 +1,5 @@
 defmodule CIDR.CalculatorTest do
-  use ExUnit.Case
+  use ExUnit.Case, async: true
   doctest CIDR.Calculator
 
   alias CIDR.Calculator
