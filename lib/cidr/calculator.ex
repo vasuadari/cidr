@@ -17,7 +17,7 @@ defmodule CIDR.Calculator do
     end
   end
 
-  def subnet_mask(32), do: <<255, 255, 255, 255>>
+  def subnet_mask(@total_network_bits), do: <<255, 255, 255, 255>>
 
   def subnet_mask(cidr) do
     {a, left_over} = assign_octet(cidr)
@@ -41,7 +41,7 @@ defmodule CIDR.Calculator do
     {<<255>>, cidr - 8}
   end
 
-  def no_of_hosts(32), do: 1
+  def no_of_hosts(@total_network_bits), do: 1
 
   def no_of_hosts(cidr) when is_integer(cidr) do
     host_bits = @total_network_bits - cidr
@@ -55,7 +55,7 @@ defmodule CIDR.Calculator do
     <<255 - a, 255 - b, 255 - c, 255 - d>>
   end
 
-  def last_address({a, b, c, d}, 32) do
+  def last_address({a, b, c, d}, @total_network_bits) do
     <<a, b, c, d>>
   end
 
