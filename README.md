@@ -16,3 +16,15 @@ def deps do
 end
 ```
 
+## Usage
+
+```elixir
+iex(1)> CIDR.parse("10.1.0.0/16")
+{:ok,
+ %CIDR{
+   class: :B,
+   hosts: 65536,
+   last_address: "10.1.255.255",
+   subnet_mask: "255.255.0.0"
+ }}
+```
