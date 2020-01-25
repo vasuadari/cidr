@@ -1,4 +1,5 @@
 # CIDR
+![](https://github.com/vasuadari/cidr/workflows/Elixir%20CI/badge.svg)
 
 A simple package to calculate subnet mask, number of hosts, last address
 and class of CIDR from a given CIDR notation.
